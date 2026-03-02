@@ -45,12 +45,6 @@ class StockWriterStep implements DataImportStepInterface
         $this->saveStock($stockEntity, $dataSet);
     }
 
-    /**
-     * @param \Orm\Zed\Stock\Persistence\SpyStock $stockEntity
-     * @param \Spryker\Zed\DataImport\Business\Model\DataSet\DataSetInterface $dataSet
-     *
-     * @return void
-     */
     protected function saveStock(SpyStock $stockEntity, DataSetInterface $dataSet): void
     {
         $stockEntity->fromArray($dataSet->getArrayCopy())->save();

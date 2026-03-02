@@ -29,9 +29,6 @@ class StockDataImportCommunicationTester extends Actor
 {
     use _generated\StockDataImportCommunicationTesterActions;
 
-    /**
-     * @return void
-     */
     public function assertStockTableContainsData(): void
     {
         $stockCount = $this->createStockQuery()->count();
@@ -42,9 +39,6 @@ class StockDataImportCommunicationTester extends Actor
         );
     }
 
-    /**
-     * @return void
-     */
     public function assertStockStoreTableContainsData(): void
     {
         $stockStoreCount = $this->createStockStoreQuery()->count();
@@ -55,17 +49,11 @@ class StockDataImportCommunicationTester extends Actor
         );
     }
 
-    /**
-     * @return \Orm\Zed\Stock\Persistence\SpyStockQuery
-     */
     protected function createStockQuery(): SpyStockQuery
     {
         return SpyStockQuery::create();
     }
 
-    /**
-     * @return \Orm\Zed\Stock\Persistence\SpyStockStoreQuery
-     */
     protected function createStockStoreQuery(): SpyStockStoreQuery
     {
         return SpyStockStoreQuery::create();

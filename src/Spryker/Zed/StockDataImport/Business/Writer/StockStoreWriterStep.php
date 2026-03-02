@@ -46,12 +46,6 @@ class StockStoreWriterStep implements DataImportStepInterface
         $this->createStockStore($stockStoreEntity, $dataSet);
     }
 
-    /**
-     * @param \Orm\Zed\Stock\Persistence\SpyStockStore $stockStoreEntity
-     * @param \Spryker\Zed\DataImport\Business\Model\DataSet\DataSetInterface $dataSet
-     *
-     * @return void
-     */
     protected function createStockStore(SpyStockStore $stockStoreEntity, DataSetInterface $dataSet): void
     {
         $stockStoreEntity->setFkStore($dataSet[StockStoreDataSetInterface::COLUMN_ID_STORE])

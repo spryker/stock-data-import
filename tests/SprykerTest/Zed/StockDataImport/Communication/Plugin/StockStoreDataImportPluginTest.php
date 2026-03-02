@@ -37,9 +37,6 @@ class StockStoreDataImportPluginTest extends Unit
      */
     protected $tester;
 
-    /**
-     * @return void
-     */
     public function testImportImportsStock(): void
     {
         // Arrange

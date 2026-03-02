@@ -52,9 +52,6 @@ class StockDataImportConfig extends DataImportConfig
         );
     }
 
-    /**
-     * @return string
-     */
     protected function getModuleRoot(): string
     {
         $moduleRoot = realpath(
